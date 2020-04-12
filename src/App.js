@@ -31,9 +31,7 @@ export default function App() {
 
       const repositoryIndex = repositories.findIndex(repository => repository.id === id)
 
-      const repository = { ...response.data, likes: repositories[repositoryIndex].likes + 1 };
-    
-      repositoriesCopy[repositoryIndex] = repository;
+      repositoriesCopy[repositoryIndex] = response.data;
 
       setRepositories(repositoriesCopy);
 
